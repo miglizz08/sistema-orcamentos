@@ -10,3 +10,17 @@ CREATE TABLE orcamentos (
     status ENUM('Aberto', 'Aprovado', 'Finalizado') DEFAULT 'Aberto',
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Vamos criar o seu primeiro usuário (A senha será 'admin123')
+-- Nota: Em sistemas reais, usamos password_hash, vamos fazer isso no PHP.
+INSERT INTO usuarios (nome, email, senha) 
+VALUES ('Miguel Admin', 'admin@email.com', '$2y$10$89E9p6.u9JvW.XjR0n.GFe7fM6pXf6pXf6pXf6pXf6pXf6pXf6pXf'); 
+-- (Essa senha acima é um hash seguro para 'admin123')

@@ -1,0 +1,110 @@
+/* Reset básico para zerar as margens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da tela - Preto profundo / Grafite bem escuro */
+body {
+    background-color: #0b0f12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #e2e8f0; /* Texto claro para dar contraste */
+}
+
+/* O "Card" de Login - Um tom acima do fundo para dar profundidade */
+.login-container {
+    background-color: #13191e;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 400px;
+    /* Uma borda sutil cinza-escura para separar os elementos */
+    border: 1px solid #1e293b; 
+}
+
+/* Formulário alinhado em coluna */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Título principal do Login */
+.login-container h2 {
+    text-align: center;
+    color: #00ff66; /* Verde elétrico/tecnológico */
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Deixa o título imponente */
+}
+
+/* Mensagem de Erro do PHP */
+.login-container p {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #f87171 !important; /* Vermelho suave que não agride no modo escuro */
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-align: center;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Estilização das caixas de entrada (E-mail e Senha) */
+.login-container input {
+    background-color: #0b0f12; /* Fundo igual ao da página principal */
+    border: 1px solid #1e293b;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efeito quando você clica para digitar (Foco Verde) */
+.login-container input:focus {
+    border-color: #00ff66;
+    /* Adiciona um leve brilho neon verde em volta do campo */
+    box-shadow: 0 0 8px rgba(0, 255, 102, 0.2); 
+}
+
+/* Cor do texto de dica (Placeholder) */
+.login-container input::placeholder {
+    color: #475569;
+}
+
+/* Botão de Entrar (O grande destaque Verde) */
+.login-container button {
+    background-color: #00ff66;
+    color: #0b0f12; /* Texto preto no botão verde dá uma leitura perfeita */
+    border: none;
+    padding: 0.9rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700; /* Texto em negrito */
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+/* Efeito de passar o mouse por cima do botão */
+.login-container button:hover {
+    background-color: #00cc52; /* Um verde um pouco mais escuro ao passar o mouse */
+    transform: translateY(-1px); /* Sobe de leve dando efeito 3D */
+    box-shadow: 0 5px 15px rgba(0, 255, 102, 0.3); /* Brilho neon no botão */
+}
+
+/* Efeito de clique */
+.login-container button:active {
+    transform: translateY(1px);
+}
