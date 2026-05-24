@@ -24,7 +24,7 @@ try {
 
 
     if (!$orcamento) {
-        header("Location: listar.php");
+        header("Location: index.php");
         exit;
     }
 } catch(PDOException $e) {

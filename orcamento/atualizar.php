@@ -27,12 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindParam(':id', $id);
 
         if ($stmt->execute()) {
-            echo "<script>alert('Orçamento atualizado com sucesso!'); window.location.href='listar.php';</script>";
+            echo "<script>alert('Orçamento atualizado com sucesso!'); window.location.href='index.php';</script>";
         }
     } catch(PDOException $e) {
         echo "Erro ao atualizar: " . $e->getMessage();
     }
 } else {
-    header("Location: listar.php");
+    header("Location: index.php");
 }
 ?>

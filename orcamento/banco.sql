@@ -4,7 +4,7 @@ CREATE TABLE orcamentos (
     modelo_maquina VARCHAR(50),
     descricao_problema TEXT,
     valor_pecas DECIMAL(10,2) DEFAULT 0.00,
-    valor_mao_de_obra DECIMAL(10,2) DEFAULT 0.00, -- Agora é uma coluna normal
+    valor_mao_de_obra DECIMAL(10,2) DEFAULT 0.00,
     -- Esta coluna abaixo soma tudo automaticamente:
     valor_total DECIMAL(10,2) AS (valor_pecas + valor_mao_de_obra), 
     status ENUM('Aberto', 'Aprovado', 'Finalizado') DEFAULT 'Aberto',
@@ -20,7 +20,6 @@ CREATE TABLE IF NOT EXISTS usuarios (
 );
 
 -- Vamos criar o seu primeiro usuário (A senha será 'admin123')
--- Nota: Em sistemas reais, usamos password_hash, vamos fazer isso no PHP.
 INSERT INTO usuarios (nome, email, senha) 
 VALUES ('Miguel Admin', 'admin@email.com', '$2y$10$89E9p6.u9JvW.XjR0n.GFe7fM6pXf6pXf6pXf6pXf6pXf6pXf6pXf'); 
 -- (Essa senha acima é um hash seguro para 'admin123')
