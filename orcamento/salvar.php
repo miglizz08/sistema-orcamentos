@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindParam(':obra', $obra);
 
         if ($stmt->execute()) {
-            echo "<script>alert('Orçamento salvo com sucesso!'); window.location.href='listar.php';</script>";
+            echo "<script>alert('Orçamento salvo com sucesso!'); window.location.href='index.php';</script>";
         }
     } catch(PDOException $e) {
         echo "Erro ao salvar: " . $e->getMessage();

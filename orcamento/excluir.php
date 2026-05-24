@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
         $stmt->bindParam(':id', $id);
 
         if ($stmt->execute()) {
-            echo "<script>alert('Orçamento apagado com sucesso!'); window.location.href='listar.php';</script>";
+            echo "<script>alert('Orçamento apagado com sucesso!'); window.location.href='index.php';</script>";
         }
     } catch(PDOException $e) {
         echo "Erro ao excluir: " . $e->getMessage();

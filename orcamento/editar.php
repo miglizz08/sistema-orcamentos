@@ -9,7 +9,7 @@ if (!isset($_SESSION['usuario_id'])) {
 require_once 'conexao.php';
 
 if (!isset($_GET['id'])) {
-    header("Location: listar.php");
+    header("Location: index.php");
     exit;
 }
 
@@ -75,7 +75,7 @@ try {
         </div>
 
         <button type="submit">Salvar Alterações</button>
-        <a href="listar.php" style="color: #aaa; margin-left: 15px; text-decoration: none;">Cancelar</a>
+        <a href="index.php" style="color: #aaa; margin-left: 15px; text-decoration: none;">Cancelar</a>
     </form>
 
 </body>
